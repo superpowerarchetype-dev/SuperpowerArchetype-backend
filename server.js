@@ -7,6 +7,10 @@ connectDB()
 
 const app = express()
 app.use(express.json())
+app.use(cors({
+    origin: ["https://superpower-archetype-frontend.vercel.app"],
+    methods: ["GET", "POST", "OPTIONS"],
+  }));
 
 const userInfo = require('./routes/userInfo')
 app.use('/users',userInfo)
