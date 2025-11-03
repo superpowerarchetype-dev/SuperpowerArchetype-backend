@@ -9,7 +9,8 @@ connectDB()
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin: ["https://superpower-archetype-frontend.vercel.app"],
+    origin: ["https://superpower-archetype-frontend.vercel.app",
+        "https://activerse.amnesty.or.th"],
     methods: ["GET", "POST", "OPTIONS"],
   }));
 
