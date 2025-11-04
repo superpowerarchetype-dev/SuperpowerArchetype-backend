@@ -11,13 +11,10 @@ const UserInfoSchema = new mongoose.Schema({
 
     email: {
         type: String,
-        required: [true, 'Please add an email'],
+        required: [false],
         trim: true,
         maxlength: [50, 'Email can not be more than 50 characters'],
-        match: [
-          /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/,
-          'Please add a valid email'
-        ]
+        
       },
 
     age: {
